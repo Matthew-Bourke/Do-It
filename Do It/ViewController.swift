@@ -9,7 +9,7 @@
 import UIKit
 
 class ViewController: UIViewController, UITableViewDataSource, UITableViewDelegate {
-
+    
     @IBOutlet weak var taskList: UITableView!
     
     var tasks : [Task] = []
@@ -33,7 +33,11 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = UITableViewCell()
         let task = tasks[indexPath.row]
-        cell.textLabel?.text = task.name
+        if task.important {
+            cell.textLabel?.text = " ❗️ \(task.name)"
+        } else {
+            cell.textLabel?.text = task.name
+        }
         return cell
     }
     
@@ -52,12 +56,17 @@ class ViewController: UIViewController, UITableViewDataSource, UITableViewDelega
         
         return [task1, task2, task3]
     }
-
+    
+    
+    @IBAction func plusTask(_ sender: Any) {
+        performSegue(withIdentifier: "addSegue", sender: nil)
+    }
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
     }
-
-
+    
+    
 }
 
