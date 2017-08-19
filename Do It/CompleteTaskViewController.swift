@@ -1,5 +1,5 @@
 //
-//  CreateTaskViewController.swift
+//  CompleteTaskViewController.swift
 //  Do It
 //
 //  Created by Matthew Bourke on 19/8/17.
@@ -8,33 +8,32 @@
 
 import UIKit
 
-class CreateTaskViewController: UIViewController {
-
-    @IBOutlet weak var taskNameTF: UITextField!
-    @IBOutlet weak var importantSwitch: UISwitch!
+class CompleteTaskViewController: UIViewController {
     
+    var task = Task()
     var previousVC = TasksViewController()
+
+    @IBOutlet weak var completeLabel: UILabel!
     
     override func viewDidLoad() {
         super.viewDidLoad()
 
         // Do any additional setup after loading the view.
+        
+        if task.important {
+            completeLabel.text = " ❗️ \(task.name)"
+        } else {
+            completeLabel.text = task.name
+        }
     }
-    
-    
-    @IBAction func addButton(_ sender: Any) {
-        // Create a task form the outlet information
-        let task = Task()
-        task.name = taskNameTF.text!
-        
-        task.important = importantSwitch.isOn
-        
-        // Add new task to array in previous VC
-        previousVC.tasks.append(task)
+
+    @IBAction func completeButton(_ sender: Any) {
+        previousVC.tasks.remove(at: previousVC.selectedIndex)
         previousVC.taskList.reloadData()
         navigationController!.popViewController(animated: true)
     }
-
+    
+    
     override func didReceiveMemoryWarning() {
         super.didReceiveMemoryWarning()
         // Dispose of any resources that can be recreated.
