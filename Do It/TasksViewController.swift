@@ -25,9 +25,9 @@ class TasksViewController: UIViewController, UITableViewDataSource, UITableViewD
         taskList.delegate = self
     }
     
-    override func viewWillAppear(_ animated: Bool) {
-        getTasks()
-        taskList.reloadData()
+    override func viewWillAppear(_ animated: Bool) { //Function runs everytime VC Appears
+        getTasks() // Loads tasks from CoreData
+        taskList.reloadData() // Updates tableview with tasks
     }
     
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
@@ -49,8 +49,6 @@ class TasksViewController: UIViewController, UITableViewDataSource, UITableViewD
         let task = tasks[indexPath.row]
         performSegue(withIdentifier: "selectTaskSegue", sender: task)
     }
-    
-    
     
     
     @IBAction func plusTask(_ sender: Any) {
