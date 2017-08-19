@@ -15,6 +15,7 @@
 		C92A215E1F47ECE300238227 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = C92A215C1F47ECE300238227 /* LaunchScreen.storyboard */; };
 		C92A21691F47ECE300238227 /* Do_ItTests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92A21681F47ECE300238227 /* Do_ItTests.swift */; };
 		C92A21741F47ECE300238227 /* Do_ItUITests.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92A21731F47ECE300238227 /* Do_ItUITests.swift */; };
+		C92A21821F47EF6400238227 /* Task.swift in Sources */ = {isa = PBXBuildFile; fileRef = C92A21811F47EF6400238227 /* Task.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -49,6 +50,7 @@
 		C92A216F1F47ECE300238227 /* Do ItUITests.xctest */ = {isa = PBXFileReference; explicitFileType = wrapper.cfbundle; includeInIndex = 0; path = "Do ItUITests.xctest"; sourceTree = BUILT_PRODUCTS_DIR; };
 		C92A21731F47ECE300238227 /* Do_ItUITests.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Do_ItUITests.swift; sourceTree = "<group>"; };
 		C92A21751F47ECE300238227 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
+		C92A21811F47EF6400238227 /* Task.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Task.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -101,6 +103,7 @@
 			children = (
 				C92A21501F47ECE300238227 /* AppDelegate.swift */,
 				C92A21521F47ECE300238227 /* ViewController.swift */,
+				C92A21811F47EF6400238227 /* Task.swift */,
 				C92A21541F47ECE300238227 /* Main.storyboard */,
 				C92A215A1F47ECE300238227 /* Assets.xcassets */,
 				C92A215C1F47ECE300238227 /* LaunchScreen.storyboard */,
@@ -262,6 +265,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				C92A21821F47EF6400238227 /* Task.swift in Sources */,
 				C92A21591F47ECE300238227 /* Do_It.xcdatamodeld in Sources */,
 				C92A21531F47ECE300238227 /* ViewController.swift in Sources */,
 				C92A21511F47ECE300238227 /* AppDelegate.swift in Sources */,
